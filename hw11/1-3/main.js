@@ -1,3 +1,7 @@
+const {
+    constants
+} = require('node:buffer');
+
 const checkExist1 = function () {
     const fs = require('node:fs');
 
@@ -19,4 +23,18 @@ const checkExist2 = function () {
     });
 }
 
-checkExist2();
+
+
+const checkExist3 = () => {
+    const fs = require("node:fs")
+
+    fs.access("./text1.txt", constants.F_ok, (err) => {
+        if (err) return console.log(err.message)
+
+        console.log("object")
+    })
+}
+
+
+
+checkExist3();
