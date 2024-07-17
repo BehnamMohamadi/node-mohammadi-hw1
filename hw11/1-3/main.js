@@ -29,9 +29,9 @@ const checkExist3 = () => {
     const fs = require("node:fs")
 
     fs.access("./text1.txt", constants.F_ok, (err) => {
-        if (err) return console.log(err.message)
+        if (err) return console.log("your file does not exist");
 
-        console.log("object")
+        console.log("your file is available");
     })
 }
 
